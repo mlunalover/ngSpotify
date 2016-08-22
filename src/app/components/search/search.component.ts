@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {SpotifyService} from "../../services/spotify.service";
 import { Artist } from '../../../Artist';
+import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
   moduleId: module.id,
   selector: 'search',
   templateUrl: 'search.component.html',
   styleUrls: ['search.component.css'],
-  providers: [SpotifyService]
+  providers: [SpotifyService],
+  directives: [ROUTER_DIRECTIVES]
 })
 export class SearchComponent implements OnInit {
   searchStr:string;
