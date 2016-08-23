@@ -40,6 +40,8 @@ const barrels: string[] = [
   'app/components/about',
   'app/components/search',
   'app/components/artist',
+  'app/components/album/album',
+  'app/components/album',
   /** @cli-barrel */
 ];
 
