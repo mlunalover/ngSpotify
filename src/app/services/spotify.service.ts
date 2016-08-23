@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {id} from "@angular/compiler/src/i18n/message";
 
 @Injectable()
 export class SpotifyService {
@@ -32,7 +31,7 @@ export class SpotifyService {
             .map(res => res.json());
     }
 
-    getAlbum(albumId: string)  {
+    getAlbum(id: string)  {
         this.albumUrl = 'https://api.spotify.com/v1/albums/' + id;
         return this._http.get(this.albumUrl)
             .map(res => res.json());
